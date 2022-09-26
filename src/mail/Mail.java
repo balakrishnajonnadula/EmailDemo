@@ -31,6 +31,7 @@ public class Mail {
 		});
 
 		session.setDebug(true);
+// 		mime message instance..!
 		MimeMessage message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress(from));
