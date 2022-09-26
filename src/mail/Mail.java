@@ -34,10 +34,10 @@ public class Mail {
 		MimeMessage message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress(from));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-			message.setSubject("chuuuuuuuu jjjhbjjhj");
-			message.setText("done");
-			Transport.send(message);
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));// to address
+			message.setSubject("Email from Balakrishna");// subject
+			message.setText("done");// text content
+			Transport.send(message);// send
 			System.out.println("complete");
 		} catch (AddressException e) {
 			e.printStackTrace();
