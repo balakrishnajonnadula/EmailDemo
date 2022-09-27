@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 public class Mail {
 
 	public static void main(String[] args) {
-		System.out.println("prepare");
+		System.out.println("prepareing to sent email");
 		String to = "myself.jbk@gmail.com";
 		String from = "jbkismyname@gmail.com";
 		Properties properties = System.getProperties();
@@ -40,7 +40,7 @@ public class Mail {
 			message.setSubject("Email from Balakrishna");// subject
 			message.setText("done");// text content
 			Transport.send(message);// send
-			System.out.println("complete");
+			System.out.println("Email sent");
 		} catch (AddressException e) {
 			e.printStackTrace();
 		} catch (MessagingException e) {
