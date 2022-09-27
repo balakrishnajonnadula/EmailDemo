@@ -13,15 +13,18 @@ import javax.mail.internet.MimeMessage;
 public class Mail {
 
 	public static void main(String[] args) {
-		System.out.println("prepareing to sent email");
+		System.out.println("prepareing to send email");
 		String to = "myself.jbk@gmail.com";
 		String from = "jbkismyname@gmail.com";
+		
+//		Properties
 		Properties properties = System.getProperties();
 		properties.put("mail.smtp.host", "smtp.gmail.com");
 		properties.put("mail.smtp.auth", "true");
-
 		properties.put("mail.smtp.ssl.enable", "true");
 		properties.put("mail.smtp.ssl.port", "465");
+		
+//		Session to authentication
 		Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
 
 			@Override
@@ -33,6 +36,7 @@ public class Mail {
 		session.setDebug(true);
 		
 // 		MimeMessage instance..!
+		
 		MimeMessage message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress(from));
